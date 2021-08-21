@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    
+    <h1 style =" font-family: 'Sofia';font-size: 50px;">Calculator</h1>
+	<div id="container">
+		<form name="calc" >
+
+		<input type="text" name="output" placeholder="Enter" disabled="disabled"><br>
+        <input type="button" value=" del " onclick="cut()" style="font-size: small;padding: 5px;">
+        <input type="button" value="sqrt" onclick="sq()" style="font-size: small;padding: 5px;">
+        <input type="button" value=" sin " onclick="sin()" style="font-size: small;padding: 5px;">
+        <input type="button" value=" cos " onclick="cos()" style="font-size: small;padding: 5px;">
+        <input type="button" value=" tan " onclick="tan()" style="font-size: small;padding: 5px;">
+        <input type="button" value=" square " onclick="square()" style="font-size: small;padding: 5px;" >
+        <input type="button" value=" cube " onclick="cube()" style="font-size: small;padding: 5px;" >
+        <input type="button" value=" inverse " onclick="inverse()" style="font-size: small;padding: 5px;">
+        <input type="button" value=" log " onclick="log()" style="font-size: small;padding: 5px;">
+        <input type="button" value=" exp " onclick="exp()" style="font-size: small;padding: 5px;">
+        <input type="button" value="power" onclick="document.calc.output.value+='**'" style="font-size: small;padding: 5px;" >
+		<input type="button" value=" ! " onclick="Factorial()" >
+		<input type="button" value=" 1 " onclick="document.calc.output.value+='1'" >
+		<input type="button" value=" 2 " onclick="document.calc.output.value+='2'" >
+		<input type="button" value=" 3 " onclick="document.calc.output.value+='3'">
+		<input type="button" value=" / " onclick="document.calc.output.value+='/'" >
+		<!-- <br> -->
+
+
+		<input type="button" value=" 4 " onclick="document.calc.output.value+='4'" >
+		<input type="button" value=" 5 " onclick="document.calc.output.value+='5'" >
+		<input type="button" value=" 6 " onclick="document.calc.output.value+='6'" >
+		<input type="button" value=" * " onclick="document.calc.output.value+='*'" >
+		<!-- <br> -->
+
+		<input type="button" value=" 7 " onclick="document.calc.output.value+='7'" >
+		<input type="button" value=" 8 " onclick="document.calc.output.value+='8'" >
+		<input type="button" value=" 9 " onclick="document.calc.output.value+='9'" >
+		<input type="button" value=" - " onclick="document.calc.output.value+='-'" >
+		<!-- <br> -->
+
+		<input type="button" value=" ( " onclick="document.calc.output.value+='('" >
+		<input type="button" value=" ) " onclick="document.calc.output.value+=')'" >
+		<input type="button" value=" 0 " onclick="document.calc.output.value+='0'" >
+		<input type="button" value=" + " onclick="document.calc.output.value+='+'" >
+		<!-- <br> -->
+
+
+
+
+		<input type="button" value=" c " onclick="document.calc.output.value =''" >
+		<input type="button" value=" . " onclick="document.calc.output.value+='.'" >
+		<input type="button" value=" = " onclick="calculate()" >
+		<input type="button" value=" % " onclick="document.calc.output.value+='%'" >
+		<br>
+
+
+
+		</form>
+	</div>
+
+
+
+
+
+
+
+
+	
+<script>
+	function Factorial() {
+		let n = document.calc.output.value
+            var ans=1;
+              
+            for (var i = 2; i <= n; i++)
+                ans = ans * i;
+			document.calc.output.value = ans;
+            //return ans;
+        }
+          
+        function GFG_Fun() { 
+            down.innerHTML = Factorial(n);
+        } 
+    function exp(){
+        document.calc.output.value= Math.exp(document.calc.output.value); 
+    }
+    function log(){
+        document.calc.output.value= Math.log(document.calc.output.value); 
+    }
+    function inverse(){
+        document.calc.output.value= 1/document.calc.output.value;
+    }
+    function square (){
+        document.calc.output.value= document.calc.output.value*document.calc.output.value; 
+    }
+    function cube (){
+        document.calc.output.value= document.calc.output.value*document.calc.output.value*document.calc.output.value; 
+    }
+     function tan(){
+        document.calc.output.value= Math.tan(document.calc.output.value); 
+    }
+    function cos(){
+        document.calc.output.value= Math.cos(document.calc.output.value); 
+    }
+     function sin(){
+        document.calc.output.value= Math.sin(document.calc.output.value); 
+    }
+    function sq(){
+        document.calc.output.value= Math.sqrt(document.calc.output.value); 
+    }
+	function calculate(){
+	document.calc.output.value=eval(document.calc.output.value);
+
+}
+function cut(){
+    console.log(document.calc.output.value);
+	document.calc.output.value= document.calc.output.value.slice(0,-1);
+    console.log(document.calc.output.value);
+
+}
+</script>
+
+
+
+
+
+
+
+
+
+</body>
+</html>
